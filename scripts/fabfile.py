@@ -8,7 +8,7 @@ env.repo = 'git@github.com:aeikenberry/pi.git'
 env.branch = 'master'
 env.user = 'root'
 
-env.hosts = ['192.168.1.145']
+env.hosts = ['192.168.1.108']
 env.pi_dir = '/root/sites/Pi/'
 env.pi_env = 'pyenv'
 env.activate_env = '. %(pi_dir)s/%(pi_env)s/bin/activate'
@@ -34,6 +34,9 @@ def update_config():
 	
 	run('systemctl stop nginx')
 	run('systemctl reload nginx')
-	run('systemctl start nginx')
+	run('reboot')
 
-	run('systemctl restart gunicorn-app')
+def deploy():
+	update_repo()
+	install()
+	update_config()
