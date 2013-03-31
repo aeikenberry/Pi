@@ -17,7 +17,8 @@ develop-eggs
 .installed.cfg
 lib
 lib64
-
+pyenv/*
+pyenv
 # Installer logs
 pip-log.txt
 
