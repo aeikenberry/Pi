@@ -11,7 +11,7 @@ env.user = 'root'
 env.hosts = ['192.168.1.108']
 env.pi_dir = '/root/sites/Pi/'
 env.pi_env = 'pyenv'
-env.activate_env = '. %(pi_dir)s/%(pi_env)s/bin/activate'
+env.activate_env = '. %(pi_dir)s/%(pi_env)s/bin/activate' % env
 
 def update_repo():
 	"Pull the repo"

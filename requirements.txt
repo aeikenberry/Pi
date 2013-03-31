@@ -2,5 +2,4 @@ Django==1.5.1
 Fabric==1.6.0
 gunicorn==0.17.2
 paramiko==1.10.0
-pycrypto==2.6
 wsgiref==0.1.2
