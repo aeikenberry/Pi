@@ -1,0 +1,14 @@
+[Unit]
+Description=gunicorn-app
+
+[Service]
+ExecStart=/root/sites/testout/pyenv/bin/gunicorn_django --bind=127.0.0.1:8001
+Type=forking
+User=root
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+WorkingDirectory=/root/sites/testout/testout/
+
+[Install]
+WantedBy=multi-user.target
